@@ -1,0 +1,107 @@
+/* Custom, Old Smartphone */
+@media all and (max-width : 320px) {
+    .page-header h2 a {  font-size: 16px;  }
+    .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
+    .table-title { padding: 5px 15px; }
+    .form-horizontal .form-group {  margin: auto;  padding: 5px 0;  }
+    button{ margin-top: 10px; }
+    /* Licenses, Devices, Software - begin */
+    .software-name, .name, .activation, .expiration, .license, .device, .download, .software-name{  width: 100%;  }
+    .order {  visibility: hidden;  display: none;  }
+    .box-content-bottom{ padding: 5px; }
+    .box-content-bottom form div{ font-size: small; }
+    /* Licenses, Devices, Software - end */
+}
+
+/* Custom, iPhone Retina */
+@media all and (min-width: 320px) and (max-width : 480px) {
+    .page-header h2 a {  font-size: 18px;  }
+    .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
+    .table-title { padding: 5px 15px; }
+    .form-horizontal .form-group {  margin: auto;  padding: 5px 0;  }
+    button{ margin-top: 10px; }
+    /* Licenses, Devices, Software - begin */
+    .software-name, .name, .activation, .expiration, .license, .device, .download, .software-name{  width: 100%;  }
+    .order {  visibility: hidden;  display: none;  }
+    .box-content-bottom form div{ font-size: small; }
+    /* Licenses, Devices, Software - end */
+}
+
+/* Extra Small Devices, Phones */
+@media all and (min-width: 480px) and (max-width : 768px) {
+    .page-header h2 a {  font-size: 22px;  }
+    .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
+    .table-title { padding: 10px 15px; }
+    .form-horizontal .form-group {  margin: auto;  padding: 5px 0;  }
+    button{ margin-top: 10px; }
+    /* Licenses - begin */
+    .software-name, .name, .expiration {  width: 40%;  }
+    .activation, .license { width: 60%; }
+    .order {  display: none;  visibility: hidden;  }
+    .box-content-bottom form div{ font-size: small; }
+    /* Licenses - end */
+    /* Devices, Software - begin */
+    .software-name { width: 100%; }
+    .device { width: 60%; } .download { width: 35%; }
+    /* Devices, Software - end */
+}
+
+/* Small Devices, Tablets */
+@media all and (min-width: 768px) and (max-width : 992px) {
+    .page-header h2 a {  font-size: 26px;  }
+    .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
+    .table-title { padding: 15px; }
+    .form-horizontal .form-group {  margin: auto;  padding: 10px 0;  }
+    button{ margin-top: 2px; }
+    /* Licenses - begin */
+    .order {  display: none;  visibility: hidden;  }
+    .software-name, .name, .expiration {  width: 40%;  }
+    .activation, .license { width: 60%; }
+    /* Licenses - end */
+    /* Devices, Software - begin */
+    .software-name { width: 100%; }
+    .device { width: 70%; } .download { width: 30%; }
+    /* Devices, Software - end */
+}
+
+/* Medium Devices, Desktops */
+@media all and (min-width: 992px) and (max-width : 1200px){
+    .page-header h2 a {  font-size: 30px;  }
+    .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
+    .table-title { padding: 15px; }
+    .form-horizontal .form-group {  margin: auto;  padding: 10px 0;  }
+    button{ margin-top: 2px; }
+    /* Licenses - begin */
+    .order {  width: 4%;  display: block;  visibility: visible;  }
+    .name {  width: 20%;  }
+    .activation {  width: 16%;  }
+    .expiration {  width: 15%;  }
+    .license {  width: 45%;  }
+    /* Licenses - end */
+    /* Devices, Software - begin */
+    .software-name { width: 96%; }
+    .device { width: 76%; }
+    .download { width: 20%; }
+    /* Devices, Software - end */
+}
+
+/* Large Devices, Wide Screens */
+@media all and (min-width : 1200px) {
+    .page-header h2 a {  font-size: 30px;  }
+    .table-title, .table-body, .table-title, .form-control{  font-size: medium;  }
+    .table-title { padding: 15px 15px; }
+    .form-horizontal .form-group {  margin: auto;  padding: 10px 0;  }
+    button{ margin-top: 2px; }
+    /* Licenses - begin */
+    .order {  width: 4%;  display: block;  visibility: visible;  }
+    .name {  width: 20%;  }
+    .activation {  width: 16%;  }
+    .expiration {  width: 15%;  }
+    .license {  width: 45%;  }
+    /* Licenses - end */
+    /* Devices, Software - begin */
+    .software-name { width: 96%; }
+    .device { width: 76%; }
+    .download { width: 20%; }
+    /* Devices, Software - end */
+}

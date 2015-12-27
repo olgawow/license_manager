@@ -1,0 +1,59 @@
+<div class="box-content">
+    <div class="table-title">Licenses for <b>{{software.name}}</b></div>
+    <div class="container-fluid">
+        <div class="row table-header">
+            <div class="order">#</div>
+            <div class="name">User / Organization Name</div>
+            <div class="activation">Allowed activations</div>
+            <div class="expiration">Expiration Date</div>
+            <div class="license">License</div>
+        </div>
+        <div class="row table-body" ng-show="isShown==true" ng-repeat="item in licenses" go-to-url="software/{{software._id}}/licenses/{{item._id}}/devices">
+            <div class="order" ng-bind="$index+1+'.'"></div>
+            <div class="name" ng-bind="item.userOrganizationName"></div>
+            <div class="activation">{{item.issuedLicenses.length}} of {{item.allowedActivations}}</div>
+            <div class="expiration" ng-bind="item.expirationDate | date:'yyyy-MM-dd'"></div>
+            <div class="license" ng-bind="item.licenseUniqueID.value"></div>
+        </div>
+    </div>
+</div>
+<div class="box-content-bottom">
+    <form name="inputForm" class="form-horizontal" novalidate role="form" ng-submit="inputForm.$valid && createLicense()">
+        <div class="form-group">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <label class="sr-only" for="userOrganizationName">User / Organization name</label>
+                <input name="userOrganizationName" id="userOrganizationName" ng-model="license.userOrganizationName"
+                       type="text" class="form-control" id="userOrganizationName"
+                       placeholder="User / Organization name" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <label class="sr-only" for="expirationDate">Expiration date</label>
+                <input ng-click="open($event)" type="text" class="form-control" uib-datepicker-popup="{{format}}"
+                       ng-model="license.expirationDate"
+                       is-open="status.opened" name="expirationDate"
+                       show-weeks="false" show-button-bar="false"
+                       datepicker-options="dateOptions" id="expirationDate" placeholder="Expiration date"
+                       ng-required="true" close-text="Close" required />
+                <div class="alert alert-danger" role="alert" ng-show="inputForm.expirationDate.$error.date">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span> Enter correct Expiration Date
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12 col-sm-10 col-md-11 col-lg-11">
+                <label class="sr-only" for="allowedActivations">Allowed activations</label>
+                <input name="allowedActivations" ng-model="license.allowedActivations"
+                       type="number" class="form-control" ng-pattern="/^\+?([1-9]\d*)$/"
+                       id="allowedActivations" placeholder="Allowed activations"
+                       negative-integer-validator required />
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1">
+                <button role="button" ng-disabled="isSaving || inputForm.$invalid" type="submit"
+                        class="btn btn-primary btn-sm active">Add</button>
+            </div>
+        </div>
+    </form>
+</div>

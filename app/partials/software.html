@@ -1,0 +1,30 @@
+<div class="box-content">
+    <div class="table-title">Software Names</div>
+    <div class="container-fluid">
+        <div class="row table-header">
+            <div class="order">#</div>
+            <div class="software-name">Software Configuration Name</div>
+        </div>
+        <div class="row table-body" ng-repeat="item in softwares" go-to-url="software/{{item._id}}/licenses">
+            <div class="order" ng-bind="$index+1+'.'"></div>
+            <div class="software-name" ng-bind="item.name"></div>
+        </div>
+    </div>
+</div>
+
+<div class="box-content-bottom">
+    <form name="inputForm" class="form-horizontal" role="form"
+          ng-submit="inputForm.$valid && createSoftware()" novalidate>
+        <div class="form-group">
+            <div class="col-xs-12 col-sm-10 col-md-11 col-lg-11">
+                <label class="sr-only" for="name">New Software Name</label>
+                <input name="name" id="name" type="text" ng-model="software.name"
+                       class="form-control" placeholder="New Software Name" required>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1">
+                <button role="button" ng-disabled="isSaving || inputForm.$invalid"
+                        type="submit" class="btn btn-primary btn-sm active">Add</button>
+            </div>
+        </div>
+    </form>
+</div>
