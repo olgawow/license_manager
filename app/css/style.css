@@ -1,0 +1,32 @@
+* {  -moz-box-sizing: border-box;  box-sizing: border-box;  }
+body {  font: 12px 'Lucida Sans Unicode', 'Trebuchet MS', Arial, Helvetica;  margin: 0 auto;  padding: 0;  min-height: 100%;  background-color: #fff;  }
+.page-header{  margin: 0 0 30px 0;  border: 0px;  }
+.page-header a{  color: #1c73a5;  }
+.page-body{  font-size: small;  }
+.box-content{  padding: 0;  border: 2px solid #3097d1;  margin-bottom: 30px;  }
+.table-title{  display: block;  width: 100%;  min-height: 35px;  padding: 10px 15px; color: #1c73a5;  font-size: large;  vertical-align: middle;  line-height: 1.5;  }
+.table-title a{  color: #1c73a5;  text-decoration: underline;  }
+.row:hover {  background-color: #E2F1FF;  }
+.table-header, .table-body {  padding: 8px 0;  }
+.table-header {  border-top: 1px solid #3097d1; border-bottom: 1px solid #3097d1;  color: #286090;  font-size: small;  font-weight: 400;  }
+.table-body:nth-child(2){ border-top: 0; }
+.table-body {  border-top: 1px solid #3097d1;  font-size: small;  color: #286090;  }
+.software-name, .order, .name, .activation, .expiration, .license, .device, .download, .software {  padding-left: 15px;  padding-right: 15px;  float: left;  position: relative;  min-height: 1px;  box-sizing: border-box;  }
+.order {  visibility: hidden;  }
+.box-content-bottom{  margin: 30px 0;  padding: 15px;  border: 2px solid #3097d1;  }
+.form-horizontal::after, .form-horizontal::before{  clear: both;  }
+.form-control{ border: 1px solid #3097d1; }
+.activation-info{  color: #1c73a5;  font-size: medium;  font-weight: 200;  }
+.btn-primary.active, .btn-primary:active, .dropdown-toggle.btn-primary{  background-color: #DDDDDD;  width: 100%;  vertical-align: middle;  }
+.ng-valid.ng-dirty{  border-color: #78FA89;  }
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn { opacity: 0.45; }
+.table-hover tr th {  background-color: rgba(57, 144, 218, 0.16);  color: #286090;  }
+.table>thead>tr>th{  border-bottom: 2px solid #337AB7;  }
+.table>tbody>tr>td {  border-top: 1px solid #337AB7;  }
+#inputForm .ng-dirty.ng-valid {  border:1px solid #78FA89;  }
+#inputForm .ng-dirty .ng-invalid {  border:1px solid red;  }
+.form-group{  margin-bottom: 0;  }
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {  background-color: #E2F1FF;  }
+.custom-error{  color: red;  display: inline;  font-size: small;  }
+.text-muted{  color: #e7e7e7;  }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {  -webkit-appearance: none;  margin: 0;  }
