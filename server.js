@@ -8,11 +8,11 @@ var mongo = require('./mongo');
 
 app.use(bodyParser.json());
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/web-ui/index.html'));
 });
 app.use('/api', router);
-app.use(express.static(path.join(__dirname, 'app')));
-app.use('/app', express.static(__dirname + '/app'));
+app.use(express.static(path.join(__dirname, 'web-ui')));
+app.use('/web-ui', express.static(__dirname + '/web-ui'));
 
 // ERROR Handler 400
 app.use(function (req, res, next) {
