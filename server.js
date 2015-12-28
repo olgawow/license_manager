@@ -3,8 +3,8 @@ var express = require('express');
 var app = new express();
 var path = require('path');
 var bodyParser = require('body-parser');
-var router = require('./routes');
-var mongo = require('./mongo');
+var router = require('./endpoints');
+var mongo = require('./data/mongo');
 
 app.use(bodyParser.json());
 app.get('/', function (req, res) {
