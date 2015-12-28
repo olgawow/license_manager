@@ -5,8 +5,8 @@ var fs = require('fs');
 var ObjectId = require('mongodb').ObjectID;
 var MongoClient = require('mongodb').MongoClient;
 var Licenses, Software;
-//var dbUrl = 'mongodb://localhost:27017/test_messages', dbPort = '27017'; //testing
-var dbUrl = 'mongodb://user:123@ds042138.mongolab.com:42138/test_messages', dbPort = '42138'; //production
+var dbUrl = 'mongodb://localhost:27017/test_messages', dbPort = '27017'; //testing
+//var dbUrl = 'mongodb://user:123@ds042138.mongolab.com:42138/test_messages', dbPort = '42138'; //production
 
 var runDB = function (callback) {
     MongoClient.connect(dbUrl, function (err, db) {
