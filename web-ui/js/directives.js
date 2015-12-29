@@ -22,7 +22,7 @@ angular.module('appDirectives', []).directive('goToUrl', ['$location', function 
                 var char = String.fromCharCode(e.which||e.charCode||e.keyCode), matches = [];
                 var inputDataLength = document.getElementById('allowedActivations').value.length;
                 if(char > 0) { matches.push(char); }
-                else if (char === 0 && inputDataLength > 0) { matches.push(char); }
+                else if (char == 0 && inputDataLength > 0) { matches.push(char); }
                 if(matches.length === 0){
                     e.preventDefault();
                     return false;

@@ -13,7 +13,7 @@
             <div class="order" ng-bind="$index+1+'.'"></div>
             <div class="device" ng-bind="item.activationId"></div>
             <div class="download">
-                <a id="{{item.activationId}}" class="btn btn-primary btn-sm"
+                <a role="button" class="btn btn-primary btn-sm btn-block active col-xs-12 col-sm-2 col-md-2 col-lg-2"
                    href="/api/software/{{software._id}}/licenses/{{license._id}}/activations/{{item.activationId}}/license_file/">Download License File</a>
             </div>
         </div>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                 <button role="button" ng-disabled="isSaving || inputForm.$invalid" type="submit"
-                        class="btn btn-primary btn-sm active">Activate</button>
+                        class="btn btn-primary btn-sm btn-block active">Activate</button>
             </div>
         </div>
     </form>

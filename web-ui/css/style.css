@@ -17,7 +17,6 @@ body {  font: 12px 'Lucida Sans Unicode', 'Trebuchet MS', Arial, Helvetica;  mar
 .form-horizontal::after, .form-horizontal::before{  clear: both;  }
 .form-control{ border: 1px solid #3097d1; }
 .activation-info{  color: #1c73a5;  font-size: medium;  font-weight: 200;  }
-.btn-primary.active, .btn-primary:active, .dropdown-toggle.btn-primary{  background-color: #DDDDDD;  width: 100%;  vertical-align: middle;  }
 .ng-valid.ng-dirty{  border-color: #78FA89;  }
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn { opacity: 0.45; }
 .table-hover tr th {  background-color: rgba(57, 144, 218, 0.16);  color: #286090;  }
@@ -26,6 +25,8 @@ body {  font: 12px 'Lucida Sans Unicode', 'Trebuchet MS', Arial, Helvetica;  mar
 #inputForm .ng-dirty.ng-valid {  border:1px solid #78FA89;  }
 #inputForm .ng-dirty .ng-invalid {  border:1px solid red;  }
 .form-group{  margin-bottom: 0;  }
+a.btn, button{ width: auto; }
+.form-horizontal .form-group {  margin: auto;  padding: 5px 0;  }
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {  background-color: #E2F1FF;  }
 .custom-error{  color: red;  display: inline;  font-size: small;  }
 .text-muted{  color: #e7e7e7;  }

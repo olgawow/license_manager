@@ -3,7 +3,6 @@
     .page-header h2 a {  font-size: 16px;  }
     .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
     .table-title { padding: 5px 15px; }
-    .form-horizontal .form-group {  margin: auto;  padding: 5px 0;  }
     button{ margin-top: 10px; }
     /* Licenses, Devices, Software - begin */
     .software-name, .name, .activation, .expiration, .license, .device, .download, .software-name{  width: 100%;  }
@@ -18,7 +17,6 @@
     .page-header h2 a {  font-size: 18px;  }
     .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
     .table-title { padding: 5px 15px; }
-    .form-horizontal .form-group {  margin: auto;  padding: 5px 0;  }
     button{ margin-top: 10px; }
     /* Licenses, Devices, Software - begin */
     .software-name, .name, .activation, .expiration, .license, .device, .download, .software-name{  width: 100%;  }
@@ -32,7 +30,6 @@
     .page-header h2 a {  font-size: 22px;  }
     .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
     .table-title { padding: 10px 15px; }
-    .form-horizontal .form-group {  margin: auto;  padding: 5px 0;  }
     button{ margin-top: 10px; }
     /* Licenses - begin */
     .software-name, .name, .expiration {  width: 40%;  }
@@ -51,7 +48,6 @@
     .page-header h2 a {  font-size: 26px;  }
     .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
     .table-title { padding: 15px; }
-    .form-horizontal .form-group {  margin: auto;  padding: 10px 0;  }
     button{ margin-top: 2px; }
     /* Licenses - begin */
     .order {  display: none;  visibility: hidden;  }
@@ -69,7 +65,6 @@
     .page-header h2 a {  font-size: 30px;  }
     .table-title, .table-body, .table-title, .form-control{  font-size: small;  }
     .table-title { padding: 15px; }
-    .form-horizontal .form-group {  margin: auto;  padding: 10px 0;  }
     button{ margin-top: 2px; }
     /* Licenses - begin */
     .order {  width: 4%;  display: block;  visibility: visible;  }
@@ -90,7 +85,6 @@
     .page-header h2 a {  font-size: 30px;  }
     .table-title, .table-body, .table-title, .form-control{  font-size: medium;  }
     .table-title { padding: 15px 15px; }
-    .form-horizontal .form-group {  margin: auto;  padding: 10px 0;  }
     button{ margin-top: 2px; }
     /* Licenses - begin */
     .order {  width: 4%;  display: block;  visibility: visible;  }
