@@ -105,7 +105,7 @@ router.route('/software/:softwareId/licenses/:licenseId/activations/:activationI
                     }
                     else {
                         var fileName = 'license_' + license.licenseUniqueID.value.slice(0,8) + '_' + req.params.activationId.slice(0,5) + '.json';
-                        res.setHeader('Content-disposition', 'attachment; filename:' + fileName);
+                        res.setHeader('Content-disposition', 'attachment; filename=' + fileName);
                         res.setHeader('Content-type', 'application/json');
                         res.end(fileStream);
                     }
@@ -123,29 +123,18 @@ router.route('/software/licenses/activations/activate') //assuming POST: license
                     activations.addActivation(req.body.licenseId, req.body.activationId, function (err, result) {
                         if (err) { res.status(err.status).send(err.message); }
                         else {
-                            var filePath = activations.createActivationFile(software.name, record, req.body.activationId);
-                            if (filePath instanceof Error) {
-                                res.status(filePath.status).send(filePath.message);
+                            var fileStream = activations.createActivationFile(software.name, record, req.body.activationId);
+                            if (fileStream instanceof Error) {
+                                res.status(fileStream.status).send(fileStream.message);
                             }
                             else {
-                                var options = { flags: 'r',
-                                    encoding: 'base64',
-                                    fd: null,
-                                    mode: '0o666',
-                                    autoClose: true
-                                };
-                                var stream = fs.createReadStream(filePath, options);
-                                var buffer = new Buffer(JSON.stringify(stream)).toString('base64');
-                                res.writeHead(
-                                    200,
-                                    "OK",
+                                var fileName = 'license_' + record.licenseUniqueID.value.slice(0,8) + '_' + req.params.activationId.slice(0,5) + '.json';
+                                res.writeHead(200, "OK",
                                     {
-                                        "Content-Type": "json/text",
-                                        "Content-Disposition": "inline; filename=license.json",
-                                        "Contente-Length": buffer.length
-                                    }
-                                );
-                                buffer.pipe(res);
+                                        "Content-Type": "application/json",
+                                        "Content-Disposition": "inline; attachment; filename="+fileName
+                                    });
+                                res.end(fileStream);
                             }
                         }
                     });
